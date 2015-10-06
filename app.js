@@ -3,6 +3,8 @@ var pikePlace = {
   minCustHour: 17,
   maxCustHour: 88,
   avgCookiesCust: 5.2,
+  cookiesHour: 0,
+  totalCookies: 0,
   randCustHour: function(max, min) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
@@ -11,14 +13,17 @@ var pikePlace = {
   },
   makeUL: function(array) {
     for (var i = 0; i < array.length; i++) {
-
+      this.cookiesHour = this.totalCookiesHour();
+      this.totalCookies += this.cookiesHour;
       var locationList = document.getElementById('pike');
-
       var item = document.createElement('li');
-
-      item.appendChild(document.createTextNode(array[i] + this.totalCookiesHour() + ' Cookies'));
-
+      item.appendChild(document.createTextNode(array[i] + this.cookiesHour + ' Cookies'));
       locationList.appendChild(item);
+      if (i === 7) {
+        var item = document.createElement('li');
+        item.appendChild(document.createTextNode('Total: ' + this.totalCookies + ' Cookies'));
+        locationList.appendChild(item);
+      }
     }
   }
 }
@@ -27,9 +32,11 @@ var pikePlace = {
 
 var seaTac = {
   location: 'SeaTac Airport',
-  minCustHour: 6,
-  maxCustHour: 44,
-  avgCookiesCust: 1.2,
+  minCustHour: 17,
+  maxCustHour: 88,
+  avgCookiesCust: 5.2,
+  cookiesHour: 0,
+  totalCookies: 0,
   randCustHour: function(max, min) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
@@ -38,14 +45,17 @@ var seaTac = {
   },
   makeUL: function(array) {
     for (var i = 0; i < array.length; i++) {
-
+      this.cookiesHour = this.totalCookiesHour();
+      this.totalCookies += this.cookiesHour;
       var locationList = document.getElementById('sea');
-
       var item = document.createElement('li');
-
-      item.appendChild(document.createTextNode(array[i] + this.totalCookiesHour() + ' Cookies'));
-
+      item.appendChild(document.createTextNode(array[i] + this.cookiesHour + ' Cookies'));
       locationList.appendChild(item);
+      if (i === 7) {
+        var item = document.createElement('li');
+        item.appendChild(document.createTextNode('Total: ' + this.totalCookies + ' Cookies'));
+        locationList.appendChild(item);
+      }
     }
   }
 }
@@ -54,9 +64,11 @@ var seaTac = {
 
 var southCenter = {
   location: 'Southcenter Mall',
-  minCustHour: 11,
-  maxCustHour: 38,
-  avgCookiesCust: 1.9,
+  minCustHour: 17,
+  maxCustHour: 88,
+  avgCookiesCust: 5.2,
+  cookiesHour: 0,
+  totalCookies: 0,
   randCustHour: function(max, min) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
@@ -65,14 +77,17 @@ var southCenter = {
   },
   makeUL: function(array) {
     for (var i = 0; i < array.length; i++) {
-
+      this.cookiesHour = this.totalCookiesHour();
+      this.totalCookies += this.cookiesHour;
       var locationList = document.getElementById('mall');
-
       var item = document.createElement('li');
-
-      item.appendChild(document.createTextNode(array[i] + this.totalCookiesHour() + ' Cookies'));
-
+      item.appendChild(document.createTextNode(array[i] + this.cookiesHour + ' Cookies'));
       locationList.appendChild(item);
+      if (i === 7) {
+        var item = document.createElement('li');
+        item.appendChild(document.createTextNode('Total: ' + this.totalCookies + ' Cookies'));
+        locationList.appendChild(item);
+      }
     }
   }
 }
@@ -80,10 +95,12 @@ var southCenter = {
 //====================================================================
 
 var bellSquare = {
-  location: 'Southcenter Mall',
-  minCustHour: 20,
-  maxCustHour: 48,
-  avgCookiesCust: 3.3,
+  location: 'Bellevue Square',
+  minCustHour: 17,
+  maxCustHour: 88,
+  avgCookiesCust: 5.2,
+  cookiesHour: 0,
+  totalCookies: 0,
   randCustHour: function(max, min) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
@@ -92,14 +109,17 @@ var bellSquare = {
   },
   makeUL: function(array) {
     for (var i = 0; i < array.length; i++) {
-
+      this.cookiesHour = this.totalCookiesHour();
+      this.totalCookies += this.cookiesHour;
       var locationList = document.getElementById('bell');
-
       var item = document.createElement('li');
-
-      item.appendChild(document.createTextNode(array[i] + this.totalCookiesHour() + ' Cookies'));
-
+      item.appendChild(document.createTextNode(array[i] + this.cookiesHour + ' Cookies'));
       locationList.appendChild(item);
+      if (i === 7) {
+        var item = document.createElement('li');
+        item.appendChild(document.createTextNode('Total: ' + this.totalCookies + ' Cookies'));
+        locationList.appendChild(item);
+      }
     }
   }
 }
@@ -108,9 +128,11 @@ var bellSquare = {
 
 var alkiBeach = {
   location: 'Southcenter Mall',
-  minCustHour: 3,
-  maxCustHour: 24,
-  avgCookiesCust: 2.6,
+  minCustHour: 17,
+  maxCustHour: 88,
+  avgCookiesCust: 5.2,
+  cookiesHour: 0,
+  totalCookies: 0,
   randCustHour: function(max, min) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   },
@@ -119,14 +141,17 @@ var alkiBeach = {
   },
   makeUL: function(array) {
     for (var i = 0; i < array.length; i++) {
-
+      this.cookiesHour = this.totalCookiesHour();
+      this.totalCookies += this.cookiesHour;
       var locationList = document.getElementById('alki');
-
       var item = document.createElement('li');
-
-      item.appendChild(document.createTextNode(array[i] + this.totalCookiesHour() + ' Cookies'));
-
+      item.appendChild(document.createTextNode(array[i] + this.cookiesHour + ' Cookies'));
       locationList.appendChild(item);
+      if (i === 7) {
+        var item = document.createElement('li');
+        item.appendChild(document.createTextNode('Total: ' + this.totalCookies + ' Cookies'));
+        locationList.appendChild(item);
+      }
     }
   }
 }
