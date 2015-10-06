@@ -1,0 +1,33 @@
+body {
+  background-color: #33CCCC;
+}
+
+h1 {
+text-align: center;
+color: #333535;
+font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  color: #194719;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  color: #001452;
+  font-size: 18px;
+  font-family: Times, sans-serif;
+}
+
+div {
+  padding-left: 100px;
+}
+
+.salmon {
+  padding-left: 500px;
+  padding-top: 100px;
+}
+
+.block {
+  height: 200px
+}
