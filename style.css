@@ -31,3 +31,11 @@ div {
 .block {
   height: 200px
 }
+
+p {
+  text-align: center;
+  padding-top: 200px;
+  font-family: Times, sans-serif;
+  font-weight: bold;
+  color: #333535;
+}
