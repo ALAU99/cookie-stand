@@ -4,7 +4,7 @@ body {
 
 h1 {
 text-align: center;
-color: #333535;
+color: #814000;
 font-family: 'Roboto', sans-serif;
 }
 
@@ -19,23 +19,69 @@ ul {
   font-family: Times, sans-serif;
 }
 
-div {
+#data {
   padding-left: 100px;
+  padding-top: 50px;
 }
 
-.salmon {
-  padding-left: 500px;
-  padding-top: 100px;
+#salmon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.block {
-  height: 200px
+#family {
+  position: relative;
+  left: 600px;
+  bottom: 1400px;
+  border: 7px solid #D17519;
+  border-radius: 15px;
 }
 
-p {
+#shirt {
+  position: relative;
+  left: 85px;
+  bottom: 700px;
+  border: 7px solid #D17519;
+  border-radius: 15px;
+}
+
+#cookies {
+  border: 7px solid #D17519;
+  border-radius: 15px;
+}
+
+#fancy {
+  position: relative;
+  left: 800px;
+  bottom: 405px;
+  border: 7px solid #D17519;
+  border-radius: 15px;
+}
+
+#quote {
   text-align: center;
-  padding-top: 200px;
+  padding-top: 25px;
+  color: #814000;
+  font-size: 19px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#main {
+  text-align: left;
+  padding: 25px;
+  color: #001452;
+  font-size: 16px;
   font-family: Times, sans-serif;
-  font-weight: bold;
-  color: #333535;
+  width: 400px;
+  margin: 50px;
+  margin-left: 150px;
+  border: 7px solid #D17519;
+  border-radius: 15px;
+}
+
+#links {
+  position: relative;
+  top: -400px;
+  left: 500px;
 }
