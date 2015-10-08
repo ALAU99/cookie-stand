@@ -13,15 +13,15 @@ function Cookies(location, minCustHour, maxCustHour, avgCookiesCust, cookiesHour
   this.totalCookiesHour = function() {
     return Math.floor(this.randCustHour(this.maxCustHour, this.minCustHour) * this.avgCookiesCust);
   },
-  this.makeUL = function(array) {
-    for (var i = 0; i < array.length; i++) {
+  this.makeUL = function(time) {
+    for (var i = 0; i < time.length; i++) {
       this.cookiesHour = this.totalCookiesHour();
       this.totalCookies += this.cookiesHour;
 
       var locationList = document.getElementById(this.ul);
       var item = document.createElement('li');
 
-      item.appendChild(document.createTextNode(array[i] + this.cookiesHour + ' Cookies'));
+      item.appendChild(document.createTextNode(time[i] + this.cookiesHour + ' Cookies'));
       locationList.appendChild(item);
 
       if (i === 7) {
