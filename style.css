@@ -13,6 +13,19 @@ h3 {
   font-family: Arial, sans-serif;
 }
 
+#end {
+  text-align: center;
+  color: #001452;
+  font-size: 18px;
+  font-family: Times, sans-serif;
+}
+
+p {
+  color: #001452;
+  font-size: 18px;
+  font-family: Times, sans-serif;
+}
+
 ul {
   color: #001452;
   font-size: 18px;
@@ -28,6 +41,17 @@ ul {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#salmon2 {
+  position: relative;
+  left: 350px;
+  bottom: 200px;
+}
+
+#image {
+  border: 7px solid #D17519;
+  border-radius: 15px;
 }
 
 #family {
@@ -84,4 +108,34 @@ ul {
   position: relative;
   top: -400px;
   left: 500px;
+}
+
+table, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {
+  background-color: #91C891;
+  border-collapse: collapse;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+fieldset {
+  width: 200px;
+  height: 260px;
+  border: 1px solid black;
+}
+
+legend {
+  font-weight: bold;
+  padding: 2px;
+  background-color: #91C891;
+  border: 2px solid black;
+}
+
+#addStore {
+  padding: 10px;
 }
