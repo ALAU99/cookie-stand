@@ -1,54 +1,102 @@
-function Cookies(location, minCustHour, maxCustHour, avgCookiesCust, cookiesHour, totalCookies, ul) {
-  this.location = location;
+// Global Variables
+var time = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
+
+//=================================================================
+
+//Object including properties
+function Cookies(storeLocation, minCustHour, maxCustHour, avgCookiesCust) {
+  this.storeLocation = storeLocation;
   this.minCustHour = minCustHour;
   this.maxCustHour = maxCustHour;
   this.avgCookiesCust = avgCookiesCust;
-  this.cookiesHour = cookiesHour;
-  this.totalCookies = totalCookies;
-  this.ul = ul;
+  this.cookiesHour = 0;
+  this.totalCookies = 0;
 
-  this.randCustHour = function(max, min) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  },
+//=================================================================
+
+  // Calculations
+  this.randCustHour = function() {
+    return Math.floor(Math.random() * (this.maxCustHour - this.minCustHour + 1)) + this.minCustHour;
+  };
   this.totalCookiesHour = function() {
     return Math.floor(this.randCustHour(this.maxCustHour, this.minCustHour) * this.avgCookiesCust);
-  },
-  this.makeUL = function(time) {
+  };
+
+//=================================================================
+  
+  // Transfer data into table
+  this.createData = function(time) {
+    var pullTable = document.getElementById('tableId');
+    var tableRow = pullTable.insertRow(1);
+    var tableLocation = tableRow.insertCell(0);
+    tableLocation.innerHTML = this.storeLocation;
+
     for (var i = 0; i < time.length; i++) {
+      var tableData = tableRow.insertCell(1);
+
       this.cookiesHour = this.totalCookiesHour();
       this.totalCookies += this.cookiesHour;
 
-      var locationList = document.getElementById(this.ul);
-      var item = document.createElement('li');
-
-      item.appendChild(document.createTextNode(time[i] + this.cookiesHour + ' Cookies'));
-      locationList.appendChild(item);
+      tableData.innerHTML = this.cookiesHour;
 
       if (i === 7) {
-        var item = document.createElement('li');
+        var tableData2 = tableRow.insertCell(9);
+        tableData2.innerHTML = this.totalCookies;
+      };
+    };
+  };
+};
 
-        item.appendChild(document.createTextNode('Total: ' + this.totalCookies + ' Cookies'));
-        locationList.appendChild(item);
-      }
-    }
-  }
-}
+//=================================================================
 
-//====================================================================
+// Object data
+var pikePlace = new Cookies('Pike Place Market', 17, 88, 5.2);
+pikePlace.createData(time);
 
-var time = ['10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: '];
+var seaTac = new Cookies('SeaTac Airport', 6, 44, 1.2);
+seaTac.createData(time);
 
-var pikePlace = new Cookies('Pike Place Market', 17, 88, 5.2, 0, 0, 'pike');
-pikePlace.makeUL(time);
+var southCenter = new Cookies('Southcenter Mall', 11, 38, 1.9);
+southCenter.createData(time);
 
-var seaTac = new Cookies('SeaTac Airport', 6, 44, 1.2, 0, 0, 'sea');
-seaTac.makeUL(time);
+var bellSquare = new Cookies('Bellevue Square', 20, 48, 3.3);
+bellSquare.createData(time);
 
-var southCenter = new Cookies('Southcenter Mall', 11, 38, 1.9, 0, 0, 'mall');
-southCenter.makeUL(time);
+var alkiBeach = new Cookies('Alki Beach', 3, 24, 2.6);
+alkiBeach.createData(time);
 
-var bellSquare = new Cookies('Bellevue Square', 20, 48, 3.3, 0, 0, 'bell');
-bellSquare.makeUL(time);
+//==================================================================
 
-var alkiBeach = new Cookies('Alki', 3, 24, 2.6, 0, 0, 'alki');
-alkiBeach.makeUL(time);
+// Store new data into table
+var newData = function(e) {
+  e.preventDefault();
+
+  var newLocation = document.getElementById('store');
+  var newMinCust = document.getElementById('minhour');
+  var newMaxCust = document.getElementById('maxhour');
+  var newAvgCookies = document.getElementById('avgcookies');
+
+  var loadData = new Cookies(newLocation.value, newMinCust.value, newMaxCust.value, newAvgCookies.value);
+
+  // Console log debugging
+  console.log(newLocation);
+  console.log(newMinCust);
+  console.log(newMaxCust);
+  console.log(newAvgCookies);
+  console.log(loadData);
+
+  // Placeholders
+  store.value = null;
+  minhour.value = null;
+  maxhour.value = null;
+  avgcookies.value = null;
+
+  // New object data
+  loadData.createData(time);
+};
+
+//==================================================================
+
+// Button listener
+var buttonClick = document.getElementById("button");
+buttonClick.addEventListener('click', newData);

@@ -7,42 +7,41 @@
 </head>
 
 <body>
-  <h1>Cookie Stand</h1>
+<br><br>  
+<table id="tableId" style="width: 60%">
+  <tr>
+    <th>Location</th>
+    <th>10:00am</th>
+    <th>11:00am</th>
+    <th>12:00pm</th>
+    <th>1:00pm</th>
+    <th>2:00pm</th>
+    <th>3:00pm</th>
+    <th>4:00pm</th>
+    <th>5:00pm</th>
+    <th>Total</th>
+  </tr>
+</table>
+<br><br>
 
-  <div></div>
-
-  <div class="salmon"><img id="salmon" src="img/salmon.png" width="500px"></div>
-
-  <div>
-    <h3>Pike Place Market</h3>
-    <ul id="pike"></ul>
-
-    <h3>SeaTac Airport</h3>
-    <ul id="sea"></ul>
-
-    <h3>Southcenter Mall</h3>
-    <ul id="mall"></ul>
-
-    <h3>Bellevue Square</h3>
-    <ul id="bell"></ul>
-
-    <h3>Alki</h3>
-    <ul id="alki"></ul>
-  </div>
   <fieldset>
-    <legend>Add New Location:</legend>
+    <legend>New Location:</legend>
      <form id="addStore">
-       <label for="location">Location:</label><br />
-       <input name="location" type="text"><br />
-       <label for="minCustHour">Minimum customers per hour:</label><br />
-       <input name="minCustHour" type="text"><br />
-       <label for="maxCustHour">Maximum customers per hour:</label><br />
-       <input name="maxCustHour" type="text"><br />
-       <label for="avgCookiesCust">Average cookies per customer:</label><br />
-       <input name="avgCookiesCust" type="text"><br />
-       <button type="button">Submit</button>
+       <label for="store">Location Name:</label><br>
+       <input id="store" type="text"><br>
+       <label for="minhour">Min. Customers Per Hour:</label><br>
+       <input id="minhour" type="text"><br>
+       <label for="maxhour">Max. Customers Per Hour:</label><br>
+       <input id="maxhour" type="text"><br>
+       <label for="avgcookies">Avg. Cookies Per Customer:</label><br>
+       <input id="avgcookies" type="text"><br><br>
+
+       <button id="button" type="click">Submit</button>
      </form>
   </fieldset>
+
+  <img id="salmon2" src="img/salmon.png" width="400px">
+  
   <script src="app.js"></script>
 </body>
 
