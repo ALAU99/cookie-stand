@@ -76,7 +76,7 @@ var newData = function(e) {
   var newMaxCust = document.getElementById('maxhour');
   var newAvgCookies = document.getElementById('avgcookies');
 
-  var loadData = new Cookies(newLocation.value, newMinCust.value, newMaxCust.value, newAvgCookies.value);
+  var loadData = new Cookies(newLocation.value, parseInt(newMinCust.value), parseInt(newMaxCust.value), parseInt(newAvgCookies.value));
 
   // Console log debugging
   console.log(newLocation);
